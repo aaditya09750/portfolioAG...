@@ -558,6 +558,26 @@ body.nav-active { overflow: hidden; }
   left: 0;
 }
 
+/* Typewriter effect */
+.typewriter {
+  display: block;
+  min-height: 2.4em;
+}
+
+.typewriter-line {
+  display: block;
+}
+
+.typewriter-line.done::after {
+  animation: blink 0.7s infinite;
+  opacity: 0;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 
 
 

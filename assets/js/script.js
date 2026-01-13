@@ -159,3 +159,48 @@ addEventOnElements(hoveredElements, "mouseout", function () {
     cursors[i].classList.remove("hovered");
   }
 });
+
+
+
+/**
+ * Typewriter effect
+ */
+
+const typewriterLines = document.querySelectorAll(".typewriter-line[data-typewriter]");
+
+if (typewriterLines.length > 0) {
+  let currentLine = 0;
+  
+  function typeWriterLine(lineElement, callback) {
+    const text = lineElement.dataset.typewriter;
+    let index = 0;
+    lineElement.classList.add("typing");
+    
+    function type() {
+      if (index < text.length) {
+        lineElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 80);
+      } else {
+        lineElement.classList.remove("typing");
+        lineElement.classList.add("done");
+        if (callback) callback();
+      }
+    }
+    type();
+  }
+  
+  function typeNextLine() {
+    if (currentLine < typewriterLines.length) {
+      typeWriterLine(typewriterLines[currentLine], function() {
+        currentLine++;
+        setTimeout(typeNextLine, 300);
+      });
+    }
+  }
+  
+  // Start typewriter after preloader finishes
+  window.addEventListener("DOMContentLoaded", function () {
+    setTimeout(typeNextLine, 800);
+  });
+}
