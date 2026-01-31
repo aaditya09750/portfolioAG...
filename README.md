@@ -3,6 +3,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Three.js](https://img.shields.io/badge/Three.js-r151-000000?style=for-the-badge&logo=three.dot-js&logoColor=white)
 ![Responsive](https://img.shields.io/badge/Responsive-Design-00D4FF?style=for-the-badge&logo=css3&logoColor=white)
 ![Ionicons](https://img.shields.io/badge/Ionicons-5.x-3880FF?style=for-the-badge&logo=ionic&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
@@ -18,6 +19,8 @@ A modern, elegant, and fully responsive personal portfolio website showcasing pr
 **Hero Section with Typewriter Effect** - Eye-catching landing area with an animated typewriter effect that cycles through personalized introduction text, creating an engaging first impression.
 
 **Interactive Tilt Effect** - Smooth 3D perspective tilt animations on images that respond to mouse movements, providing depth and interactivity to visual elements.
+
+**Interactive 3D Globe** - A high-performance, custom-shaded 3D globe built with Three.js. It features instanced rendering for 60fps performance, a muted teal-cyan aesthetic, rim lighting (Fresnel effect), and interactive rotation/extrusion on hover.
 
 **Custom Cursor System** - Dual-layer custom cursor with dot and outline elements that transform on hover states, enhancing the premium feel of user interactions.
 
@@ -43,6 +46,8 @@ A modern, elegant, and fully responsive personal portfolio website showcasing pr
 | Google Fonts | Poppins | Modern sans-serif typography for optimal readability |
 | Recoleta Font | Custom | Elegant serif display font for headings and titles |
 | Ionicons | 5.5.2 | Comprehensive icon library for UI elements |
+| Three.js | r151 | Core engine for the interactive 3D globe |
+| GSAP | 3.11.5 | High-performance animations for globe interactions |
 | Web3Forms | API | Serverless contact form submission handling |
 
 ## Quick Start

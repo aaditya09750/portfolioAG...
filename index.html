@@ -30,6 +30,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/globe.css">
 
   <!-- 
     - preload images
@@ -40,6 +41,16 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.151.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.151.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 
 </head>
 
@@ -296,9 +307,10 @@
             <div class="tab-content active" data-tab-content="about">
               <div class="grid-list">
 
-                <figure class="skilset1 img-holder" style="--width: ; --height: ;" data-tilt>
-                  <img src="./assets/images/skillset1.png" width="570" height="420" loading="lazy" alt="about banner"
-                    class="img-cover">
+                <figure class="skilset1 img-holder" style="--width: 570; --height: 420;" id="globe-mask">
+                  <div id="globe-container">
+                    <canvas class="globe-canvas"></canvas>
+                  </div>
                 </figure>
 
                 <div class="about-content">
@@ -309,12 +321,11 @@
 
 
                   <p class="section-text">
-                    A passionate Full Stack Developer pursuing a degree in Information Technology at Yadavrao Tasgaonkar
-                    Institute Of Engineering And Technology. Specialized in build, develop and deploy robust and
+                    A passionate Full Stack Developer. Specialized in build, develop and deploy robust and
                     scalable frontend and backend systems. With a commitment to excellence, I’m known for my
-                    problem-solving skills and adeptness at meeting deadlines. A fast learner, I stay updated on
+                    problem solving skills and adeptness at meeting deadlines. A fast learner, I stay updated on
                     industry trends through selfstudy, bringing technical expertise and enthusiasm to contribute to
-                    impactful projects. My goal is to apply what I learn to real-world challenges and contribute
+                    impactful projects. My goal is to apply what I learn to real world challenges and contribute
                     meaningfully to the field.
                   </p>
 
@@ -343,20 +354,23 @@
 
                       <div class="social-list">
 
-                        <a rel="noopener noreferrer" href="https://github.com/aaditya09750" class="social-link" title="GitHub" target="_blank">
+                        <a rel="noopener noreferrer" href="https://github.com/aaditya09750" class="social-link"
+                          title="GitHub" target="_blank">
                           <i class="fa-brands fa-github"></i>
                         </a>
 
-                        <a rel="noopener noreferrer" href="https://www.linkedin.com/in/aadityagunjal0975/" class="social-link" title="LinkedIn"
-                          target="_blank">
+                        <a rel="noopener noreferrer" href="https://www.linkedin.com/in/aadityagunjal0975/"
+                          class="social-link" title="LinkedIn" target="_blank">
                           <i class="fa-brands fa-linkedin-in"></i>
                         </a>
 
-                        <a rel="noopener noreferrer" href="https://wa.me/qr/5S6RP74BVGGDH1" class="social-link" title="WhatsApp" target="_blank">
+                        <a rel="noopener noreferrer" href="https://wa.me/qr/5S6RP74BVGGDH1" class="social-link"
+                          title="WhatsApp" target="_blank">
                           <i class="fa-brands fa-whatsapp"></i>
                         </a>
 
-                        <a rel="noopener noreferrer" href="https://www.instagram.com/_aadiii0975_____?igsh=MWoxODk0Z2xrOWh3NA=="
+                        <a rel="noopener noreferrer"
+                          href="https://www.instagram.com/_aadiii0975_____?igsh=MWoxODk0Z2xrOWh3NA=="
                           class="social-link" title="Instagram" target="_blank">
                           <i class="fa-brands fa-instagram"></i>
                         </a>
@@ -705,6 +719,11 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - 3D Globe scripts
+  -->
+  <script src="./assets/js/globe.js" type="module"></script>
 
   <!-- 
     - ionicon link
