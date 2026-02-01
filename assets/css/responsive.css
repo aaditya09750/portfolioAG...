@@ -117,16 +117,17 @@
    */
 
   .profile-card .card-banner {
-    display: block;
-    border-radius: var(--radius-circle);
+    width: 70px;
+    height: 70px;
   }
 
-  .testi .profile-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  .profile-card .card-title {
+    font-size: var(--fontSize-7);
   }
 
+  .profile-card .card-subtitle {
+    font-size: var(--fontSize-10);
+  }
 }
 
 
